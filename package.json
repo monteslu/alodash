@@ -1,0 +1,35 @@
+{
+  "name": "prodash",
+  "version": "0.1.0",
+  "description": "Simple promise proxy for lodash",
+  "main": "index.js",
+  "scripts": {
+    "test": "istanbul cover _mocha && npm run check-coverage",
+    "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --lines 100 --functions 100",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/monteslu/prodash.git"
+  },
+  "keywords": [
+    "redux",
+    "ducks",
+    "react"
+  ],
+  "author": "Luis Montes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monteslu/prodash/issues"
+  },
+  "homepage": "https://github.com/monteslu/prodash#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "coveralls": "^2.12.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.5"
+  }
+}
