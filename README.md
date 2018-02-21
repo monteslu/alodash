@@ -9,7 +9,7 @@ Just a tiny proxy to promise-enable loash functions
 
 ## example
 
-Simply an `a` to the lodash function you want to use
+Simply add an `a` to the lodash function you want to use:
 
 ```javascript
 
