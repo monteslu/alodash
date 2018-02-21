@@ -7,11 +7,13 @@ const funcHandler = {
       return target[name];
     }
 
-    return function (obj, ...args) {
-      return Promise.resolve(obj)
-        .then(function (result) {
-          args.unshift(result);
-          return _[name.substring(1)].apply(null, args);
+    return function (...args) {
+      const pargs = args.map(function(arg) {
+        return Promise.resolve(arg);
+      });
+      return Promise.all(pargs)
+        .then(function(resolvedArgs) {
+          return _[name.substring(1)].apply(null, resolvedArgs);
         });
     }
   }
