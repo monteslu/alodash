@@ -21,3 +21,5 @@ const value = await aget(promise, 'some.deeply.nested.prop');
 console.log(value);  // 1
 
 ```
+
+Any of the function parameters can be a value, a promise, or function.
