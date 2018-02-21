@@ -15,11 +15,23 @@ describe('alodash', function(){
     done();
   });
 
+  it('should reject if not a lodash function', function(done){
+    const { aNotALodashFunction } = alodash;
+    aNotALodashFunction()
+      .then(function(){
+        done(new Error('should not get here'));
+      })
+      .catch(function(err) {
+        done();
+      });
+  });
+
   it('should return lodash from a _', function(done){
     const { _ } = alodash;
     _.should.be.a('function');
     done();
   });
+
 
   it('should call a lodash function with a promise', function(done){
     const promise = Promise.resolve({some:{ nested: {prop: 1}}});
@@ -32,7 +44,18 @@ describe('alodash', function(){
       .catch(function(error) {
         done(error);
       });
+  });
 
+  it('should call a lodash function without requiring a promise', function(done){
+    const { amean } = alodash;
+    amean([4, 2, 8, 6])
+      .then(function(val) {
+        val.should.equal(5);
+        done();
+      })
+      .catch(function(error) {
+        done(error);
+      });
   });
 
 });
