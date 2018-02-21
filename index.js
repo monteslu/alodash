@@ -8,7 +8,9 @@ const funcHandler = {
     }
 
     return function (...args) {
-      const pargs = _.map(args, Promise.resolve);
+      const pargs = args.map(function(arg) {
+        return Promise.resolve(arg);
+      });
       return Promise.all(pargs)
         .then(function(resolvedArgs) {
           return _[name.substring(1)].apply(null, resolvedArgs);

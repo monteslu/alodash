@@ -1,6 +1,6 @@
 {
   "name": "alodash",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Simple promise proxy for lodash",
   "main": "index.js",
   "scripts": {

@@ -58,4 +58,34 @@ describe('alodash', function(){
       });
   });
 
+  it('should call a lodash function with mutliple promise params', function(done){
+    const { aclamp } = alodash;
+    aclamp(Promise.resolve(-10), Promise.resolve(-5), Promise.resolve(5))
+      .then(function(val) {
+        val.should.equal(-5);
+        done();
+      })
+      .catch(function(error) {
+        done(error);
+      });
+  });
+
+  it('should call a lodash function that has a function param', function(done){
+    const { afind } = alodash;
+    const users = [
+      { 'user': 'barney',  'age': 36, 'active': true },
+      { 'user': 'fred',    'age': 40, 'active': false },
+      { 'user': 'pebbles', 'age': 1,  'active': true }
+    ];
+    afind(Promise.resolve(users), function(o) { return o.age < 40; })
+      .then(function(val) {
+        val.user.should.equal('barney');
+        done();
+      })
+      .catch(function(error) {
+        done(error);
+      });
+  });
+
+
 });
