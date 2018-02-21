@@ -1,5 +1,5 @@
 {
-  "name": "prodash",
+  "name": "alodash",
   "version": "0.1.0",
   "description": "Simple promise proxy for lodash",
   "main": "index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/monteslu/prodash.git"
+    "url": "git+ssh://git@github.com/monteslu/alodash.git"
   },
   "keywords": [
     "redux",
@@ -20,9 +20,9 @@
   "author": "Luis Montes",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/monteslu/prodash/issues"
+    "url": "https://github.com/monteslu/alodash/issues"
   },
-  "homepage": "https://github.com/monteslu/prodash#readme",
+  "homepage": "https://github.com/monteslu/alodash#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "coveralls": "^2.12.0",
