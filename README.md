@@ -5,7 +5,7 @@
 [![Build Status](https://travis-ci.org/monteslu/alodash.svg?branch=master)](https://travis-ci.org/monteslu/alodash) [![Coverage Status](https://coveralls.io/repos/monteslu/alodash/badge.svg?branch=master)](https://coveralls.io/r/monteslu/alodash?branch=master)
 
 
-Just a tiny proxy to promise-enable loash functions
+Just a tiny proxy to promise-enable [lodash](https://lodash.com/) functions
 
 ## example
 
