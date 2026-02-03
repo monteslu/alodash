@@ -1,0 +1,29 @@
+# alodash
+
+> Promise-enabled lodash functions
+
+A tiny proxy that wraps lodash functions to work seamlessly with promises. Add an 'a' prefix to any lodash function to use it with async values.
+
+## What it does
+- Promise-enables all lodash functions via ES6 Proxy
+- Parameters can be values, promises, or functions
+- Zero config, works with existing lodash knowledge
+
+## Install
+```bash
+npm install alodash
+```
+
+## Quick Start
+```javascript
+const { aget } = require('alodash');
+
+const promise = Promise.resolve({some:{deeply:{nested:{prop:1}}}});
+const value = await aget(promise, 'some.deeply.nested.prop');
+console.log(value);  // 1
+```
+
+## Links
+- Repository: https://github.com/monteslu/alodash
+- npm: https://www.npmjs.com/package/alodash
+- lodash: https://lodash.com/
